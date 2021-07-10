@@ -1,0 +1,26 @@
+//Cuando vayamos a hacer un programa tenemos que tener en cuenta que siempre se leera de arriba a abajo, sin ningún tipo de salto.
+//Hay que poner comentarios usando // para así tener ayudas o recordatorios.
+
+Algoritmo variables //incio del programa
+
+	Definir color como caracter; //Estamos definiendo la variable color como un caracter.
+
+	color<-"verde"; //En este caso al ser de tipo caracter hay que entrecomillar la expresión de la variable.
+
+	Escribir color; //Con esto estaríamos comprobando que tenemos dentro de la variable color.
+
+
+	Definir edad como Entero; //Estamos definiendo la variable edad como un número entero.
+	
+	edad<-55; //En este caso al ser un número no es necesario entrecomillarlo.
+
+	Escribir edad; //Con esto comprobamos que hay dentro de la variable edad.
+
+
+	Definir activo como Logico; //Estamos definiendo la varibale activo como  logico, este tipo solo puede guardar verdadero o falso.
+
+	activo<-verdadero; //Al solo guardar esos dos datos no es necesario entrecomillarlo.
+
+	Escribir activo; //Aquí volvemos a comprobar la variable.
+
+FinAlgoritmo //Fin del programa
