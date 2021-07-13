@@ -24,3 +24,15 @@ Algoritmo variables //incio del programa
 	Escribir activo; //Aquí volvemos a comprobar la variable.
 
 FinAlgoritmo //Fin del programa
+
+
+//Estas variables tienen un problema y es que en cualquier momento pueden sobreescribirse, es decir, si hicieramos lo siguiente:
+
+	Definir color como caracter;
+	color<-"verde";
+
+//Y en cualquier otro lugar de el programa pusieramos:
+
+	color<-"rojo"
+
+//Estaríamos sustituyendo verde por rojo.
