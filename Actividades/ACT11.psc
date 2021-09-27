@@ -1,15 +1,16 @@
-Proceso ACT10
+Proceso ACT11
 	
 	Definir x Como Entero;
 	Definir n Como Entero;
 	Definir resultado Como Entero;
 	x=0;
 	n=1;
-	Mientras x<19 Hacer
+	
+	Repetir
 		x=x+1;
 		n=x+n;
 		resultado=x+n;
-	Fin Mientras
+	Hasta Que x=19;
 	
 	Escribir resultado;
 	
