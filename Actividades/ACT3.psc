@@ -7,7 +7,7 @@ Proceso ACT3
 	Leer num1;
 	Leer num2;
 	
-	Si num1>0 Y num2>0  Entonces
+	Si num1>=0 Y num2>=0  Entonces
 		Escribir num1+num2;
 	SiNo
 		Escribir "Lo siento, sus números no son positivos";

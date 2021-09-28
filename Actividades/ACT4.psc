@@ -1,8 +1,7 @@
 Proceso ACT4
-	Definir num1 Como Entero;
-	Definir num2 Como Entero;
+	Definir num1, num2 Como Real;
 	
-	Escribir "¿Que números te gustaría hacer la media?";
+	Escribir "Escriba los números para hacer la media";
 	
 	Escribir "Primer número: ";
 	Leer num1;

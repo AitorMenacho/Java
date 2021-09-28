@@ -1,6 +1,6 @@
 Proceso ACT1
-	Definir num1 Como Entero;
-	Definir num2 Como Entero;
+	
+	Definir num1,num2 Como Real;
 	
 	Escribir "Primer número para las cuentas";
 	Leer num1;
@@ -8,11 +8,12 @@ Proceso ACT1
 	Leer num2;
 	
 	Escribir "Suma";
-	Escribir num1,"+",num2,"=",num1+num2;
+	Escribir num1," + ",num2,"=",num1+num2;
 	
 	Escribir "Resta";
-	Escribir num1,"-",num2,"=",num1-num2;
+	Escribir num1," - ",num2,"=",num1-num2;
 	
 	Escribir "Multiplicación";
-	Escribir num1,"x",num2,"=",num1*num2;
+	Escribir num1," x ",num2,"=",num1*num2;
+	
 FinProceso

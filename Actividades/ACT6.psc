@@ -1,8 +1,6 @@
 Proceso ACT6
-	Definir num1 Como Entero;
-	Definir num2 Como Entero;
-	Definir grande Como Logico;
-	Definir mismo Como Logico;
+	
+	Definir num1, num2 Como Real;
 	
 	Escribir "Números a comprobar";
 	Escribir "Primer número";
@@ -10,14 +8,14 @@ Proceso ACT6
 	Escribir "Segundo número";
 	Leer num2;
 	
-	grande=num1>num2;
-	Escribir grande;
-	
-	Si grande Entonces
+	Si num1>num2 Entonces
 		Escribir num1," es mayor que ",num2;
 	SiNo
-		Escribir num2," es mayor que ",num1;
+		si num2>num1 Entonces
+			Escribir num2, " es mayor que ",num1;
+		SiNo
+			Escribir "Los números son iguales";
+		FinSi
 	Fin Si
-	
 	
 FinProceso
