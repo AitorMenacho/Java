@@ -4,13 +4,12 @@ Proceso ACT12
 	Definir n Como Entero;
 	Definir resultado Como Entero;
 	x=0;
-	n=1;
+	n=0;
 	
-	Para x<-0 Hasta 19 Con Paso 1 Hacer
+	Para x<-0 Hasta 20 Con Paso 1 Hacer
 		n=x+n;
-		resultado=x+n;
 	Fin Para
 	
-	Escribir resultado;
+	Escribir "El resultado es ",n;
 	
 FinProceso

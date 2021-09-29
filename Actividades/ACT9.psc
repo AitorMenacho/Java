@@ -21,8 +21,11 @@ Proceso ACT9
 	
 	alumnos=suspensos+aprobados+bien+notable+sobresaliente;
 	
+	Escribir " ";
 	superado=(alumnos-suspensos)*100/alumnos;
 	Escribir "Ha aprobado un ",superado,"% de los alumnos";
+	
+	Escribir " ";
 	
 	suspensos=suspensos*100/alumnos;
 	aprobados=aprobados*100/alumnos;
