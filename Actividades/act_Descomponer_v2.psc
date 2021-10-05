@@ -1,27 +1,38 @@
 Proceso act_Descomponer_numeros_v2
 	
-	Definir N Como Entero;
-	Definir part Como real;
-	Definir divisor Como Real;
+	Definir num Como Entero;
+	Definir cnum Como Entero;
+	Definir x Como Entero;
+	Definir pot Como Entero;
+	Definir numdesc Como Entero;
 	
-	Escribir "Introduzca un número con un máximo de 20 carácteres";
-	Leer N;
+	Escribir "Introduzca el número que quiere descomponer";
+	Leer num;
 	
-	divisor=100000000000000000000
-		
+	cnum=num;
+	x=0;
+	
 		Repetir
 			
-			divisor=divisor/10;
+			num=TRUNC(num/10);
+			x=x+1;
 			
-			part=N/divisor
-			
-			si part>=1 Entonces
-				
-				Escribir TRUNC(part);
-				
-			FinSi
+		Hasta Que num<10
 		
+		Escribir "El número tiene ",x+1," números";
+		
+		pot=10^x;
+		num=cnum;
+		
+		Mientras pot>=10 Hacer
 			
-		Hasta Que divisor<10
-	
+			numdesc=TRUNC(num/pot);
+			pot=pot/10;
+			
+			Escribir numdesc;
+			
+		FinMientras
+		
+		Escribir num;
+		
 FinProceso
