@@ -23,7 +23,15 @@ Proceso ACT9
 	
 	Escribir " ";
 	superado=(alumnos-suspensos)*100/alumnos;
+	
+	Escribir "En la clase hay ",alumnos, " alumnos.";
 	Escribir "Ha aprobado un ",superado,"% de los alumnos";
+	
+	si superado>50 Entonces
+		Escribir "La clase avanza correctamente";
+	sino
+		Escribir "La clase debe mejorar";
+	FinSi
 	
 	Escribir " ";
 	
@@ -38,6 +46,5 @@ Proceso ACT9
 	Escribir "Un ",bien,"% de la clase ha aprobado con bien";
 	Escribir "Un ",notable,"% de la clase ha aprobado con notable";
 	Escribir "Un ",sobresaliente,"% de la clase ha aprobado con sobresaliente";
-	
 	
 FinProceso

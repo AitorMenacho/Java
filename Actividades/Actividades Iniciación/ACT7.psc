@@ -1,8 +1,13 @@
 Proceso ACT7
 	
-	Definir GANANCIAS, IMPUESTOS, precio_coche Como Real;
-	Definir suma_porcentajes,coste_final Como Real;
-	Definir IM, GAN como Real;
+	Definir GANANCIAS Como Real;
+	Definir IMPUESTOS Como Real;
+	Definir precio_coche Como Real;
+	
+	Definir suma_porcentajes Como Real;
+	Definir coste_final Como Real;
+	Definir IM Como Real;
+	Definir GAN como Real;
 	
 	IM=0.06;
 	GAN=0.12;
@@ -18,7 +23,8 @@ Proceso ACT7
 	
 	Escribir "Ganancias: ",ganancias," euros";
 	Escribir "Impuestos: ",IMPUESTOS," euros";
-	Escribir "Coste fabricación: ",precio_coche," euros";
+	Escribir "Fabricación: ",precio_coche," euros";
+	Escribir "--------------------------------------";
 	Escribir "Coste final: ",coste_final," euros";
 	
 FinProceso

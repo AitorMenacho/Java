@@ -10,7 +10,7 @@ Proceso ACT13_V2
 	
 	Repetir
 		
-		Escribir "Pon el número que quiera sumar para la media";
+		Escribir "Pon el número que quiera sumar para la media. Para finalizar escribe un número negativo";
 		Leer x;
 		
 		z=z+1;
