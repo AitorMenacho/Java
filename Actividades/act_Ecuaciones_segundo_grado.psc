@@ -4,7 +4,8 @@ Proceso act_Ecuaciones_segundo_grado
 	Definir b Como Entero;
 	Definir c Como Entero;
 	Definir ecuacion Como Real;
-	Definir simbolo Como Caracter;
+	Definir ecuacion2 Como Real;
+	Definir det Como Real;
 	
 	Escribir "Escribe la b de la ecuación";
 	Leer b;
@@ -15,22 +16,25 @@ Proceso act_Ecuaciones_segundo_grado
 	Escribir "Escribe la c de la ecuacin";
 	Leer c;
 	
-	Escribir "quiere sumar o restar";
-	leer simbolo
+	det=b^2-4*a*c;
 	
-	si simbolo="sumar" Entonces
+	si det>=0 Entonces
 		
-		ecuacion=-b+raiz((b*b)-4*a*c)/2*a;
+		ecuacion=(-b+raiz(det))/(2*a);
+		ecuacion2=(-b-raiz(det))/(2*a);
+		
+		Escribir "-",b,"+ raiz(",b,"²-4 x",a," x ",c,")";
+		
+		Escribir "x1:",ecuacion;
+		Escribir "x2:",ecuacion2;
 		
 	SiNo
 		
-		ecuacion=-b-raiz((b*b)-4*a*c)/2*a;
+		Escribir "Esta ecuación no tiene resultado reales";
 		
 	FinSi
 	
-	Escribir "-",b,"+ raiz(",b,"²-4 x",a," x ",c,")";
 	
-	Escribir ecuacion;
 	
 	
 FinProceso
