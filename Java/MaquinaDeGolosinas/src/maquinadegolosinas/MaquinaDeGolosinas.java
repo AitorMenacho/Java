@@ -95,15 +95,36 @@ public class MaquinaDeGolosinas {
                     case 1:
                         muestraGolosinas(productos,precio);
                         break;
+                        
                     case 2:
                         System.out.println("");
                         System.out.println("Escribe la posición");
                         int numGolosina = sc.nextInt();
+                        
                         pideGolosinas(numGolosina, productos, precio, cant);
                         break;
 
                     case 3:
-                        rellenaGolosinas();
+                        System.out.println("Escribe la contraseña de administrador");
+                        int pass = sc.nextInt();
+                        
+                        if( pass == 1234 ){
+                            
+                            System.out.println("¿Que golosina quiere rellenar?");
+                            numGolosina = sc.nextInt();
+                            
+                            System.out.println("¿Cuanto ha rellenado?");
+                            int nCant = sc.nextInt();
+                            
+                            rellenaGolosinas(numGolosina, productos, precio, cant, nCant);
+                            
+                        } else {
+                            
+                            System.out.println("Error al introducir la contraseña");
+                            break;
+                            
+                        }
+                        
                         break;
                     case 4:
                         salir = true;
@@ -142,27 +163,76 @@ public class MaquinaDeGolosinas {
     private static void pideGolosinas(int numGolosina, String[][] productos, double[][] precio, int[][] cant) {
         
         String posiciones = String.valueOf(numGolosina);
+        
+        if( posiciones.length() == 1 ){
+            posiciones = "0" + posiciones;
+        }
+        
         int posicion1 = Integer.parseInt(posiciones.substring(0,1));
         int posicion2 = Integer.parseInt(posiciones.substring(1));
         
-        if( cant[posicion1][posicion2] != 0 ){
+        System.out.println("");
+        
+        try {
             
-            System.out.println("Producto:");
-            System.out.println(productos[posicion1][posicion2]);   
-            System.out.println("Precio:");
-            System.out.println(precio[posicion1][posicion2]);   
+            if( cant[posicion1][posicion2] != 0 ){
+
+               System.out.println("Producto: " + productos[posicion1][posicion2]);   
+               System.out.println("Precio: " + precio[posicion1][posicion2]);   
+
+               cant[posicion1][posicion2] = cant[posicion1][posicion2] - 1;
+
+            } else {
+
+               System.out.println("El producto que has pedido no tiene existencias");
+
+            }   
             
-            cant[posicion1][posicion2] = cant[posicion1][posicion2] - 1;
+        } catch (Exception e) {
             
-        } else {
-            
-            System.out.println("El producto que has pedido no tiene existencias");
+            System.out.println("Esa posición no existe.");
             
         }
         
+        System.out.println("");
+        
     }
 
-    private static void rellenaGolosinas() {
+    private static void rellenaGolosinas(int numGolosina, String[][] productos, double[][] precio, int[][] cant, int nCant) {
+     
+        String posiciones = String.valueOf(numGolosina);
+        
+        if( posiciones.length() == 1 ){
+            posiciones = "0" + posiciones;
+        }
+        
+        int posicion1 = Integer.parseInt(posiciones.substring(0,1));
+        int posicion2 = Integer.parseInt(posiciones.substring(1));
+        
+        System.out.println("");
+        
+        try {
+            
+            if( cant[posicion1][posicion2] != 0 ){
+            
+            System.out.println("Producto: " + productos[posicion1][posicion2]);
+            System.out.println("Cantidad antes: " + cant[posicion1][posicion2]);
+            
+            cant[posicion1][posicion2] = cant[posicion1][posicion2] + nCant;
+            
+            System.out.println("Cantidad actual: " + cant[posicion1][posicion2]);   
+            
+        }
+            
+        } catch (Exception e) {
+        
+            System.out.println("Esa posición no existe");
+            
+        }
+        
+        
+        
+        System.out.println("");
         
     }
     
