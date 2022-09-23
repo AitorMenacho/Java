@@ -11,7 +11,7 @@ public class MaquinaDeGolosinas {
         
         Scanner sc = new Scanner(System.in);
         
-        String rutaFichero = "C:\\Users\\alumno\\Documents\\NetBeansProjects\\MaquinaDeGolosinas\\maquinaGolosinas.txt";
+        String rutaFichero = "maquinaGolosinas.txt";
         
         try {
             
@@ -213,8 +213,6 @@ public class MaquinaDeGolosinas {
         
         try {
             
-            if( cant[posicion1][posicion2] != 0 ){
-            
             System.out.println("Producto: " + productos[posicion1][posicion2]);
             System.out.println("Cantidad antes: " + cant[posicion1][posicion2]);
             
@@ -222,7 +220,6 @@ public class MaquinaDeGolosinas {
             
             System.out.println("Cantidad actual: " + cant[posicion1][posicion2]);   
             
-        }
             
         } catch (Exception e) {
         
